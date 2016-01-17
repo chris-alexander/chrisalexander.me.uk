@@ -1,7 +1,9 @@
 var gulp        = require('gulp');
+var harp        = require('harp');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
-var harp        = require('harp');
+var deploy      = require('gulp-gh-pages');
+var shell       = require('gulp-shell');
 
 /**
  * Serve the Harp Site from the src directory
@@ -21,16 +23,45 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch(["*.css", "*.sass", "*.scss", "*.less"], function () {
+    gulp.watch("public/**/*.sass", function () {
       reload("main.css", {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(["*.html", "*.ejs", "*.jade", "*.js", "*.json", "*.md"], function () {
+    gulp.watch(["public/**/*.ejs", "public/**/*.js", "public/**/*.json", "public/**/*.md"], function () {
       reload();
     });
   })
+});
+
+/**
+ * Serve the site in production
+ */
+
+gulp.task('production', function () {
+  return gulp.src('')
+    .pipe(shell([
+      'NODE_ENV=production sudo harp server --port 80'
+    ]))
+});
+
+/**
+ * Build the Harp Site
+ */
+gulp.task('build', function () {
+  return gulp.src('')
+    .pipe(shell([
+      'harp compile . dist'
+    ]))
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', ['build'], function () {
+  return gulp.src("./dist/**/*")
+    .pipe(deploy())
 });
 
 /**
