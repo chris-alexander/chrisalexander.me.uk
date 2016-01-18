@@ -12,14 +12,15 @@
   },
   "author": "",
   "license": "ISC",
+  "private": true,
   "bugs": {
     "url": "https://github.com/chris-alexander/chrisalexander.me.uk/issues"
   },
   "devDependencies": {
+    "browser-sync": "^1.3.5",
     "gulp": "^3.9",
     "gulp-gh-pages": "^0.3.3",
-    "harp": "^0.20.0",
-    "browser-sync": "^1.3.5",
-    "gulp-shell": "^0.4.2"
+    "gulp-shell": "^0.4.2",
+    "harp": "^0.20.0"
   }
 }
