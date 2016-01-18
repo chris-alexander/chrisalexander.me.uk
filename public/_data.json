@@ -1,0 +1,11 @@
+{
+  "index": {
+    "title": "Home"
+  },
+  "about": {
+    "title": "About"
+  },
+  "404": {
+    "title": "404 Not found"
+  }
+}

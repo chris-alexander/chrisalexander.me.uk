@@ -3,8 +3,18 @@
   "version": "0.0.1",
   "description": "",
   "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chris-alexander/chrisalexander.me.uk.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chris-alexander/chrisalexander.me.uk/issues"
+  },
   "devDependencies": {
     "gulp": "^3.9",
     "gulp-gh-pages": "^0.3.3",
