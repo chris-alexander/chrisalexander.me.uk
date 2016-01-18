@@ -1,1 +1,10 @@
 $base-color: #C6538C;
+
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: .25,
+  gutter-position: inside,
+  debug: (image: hide),
+  global-box-sizing: border-box,
+);

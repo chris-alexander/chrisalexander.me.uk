@@ -10,6 +10,14 @@ body {
   padding: 3em;
 }
 
+.wrapper {
+  @include container;
+}
+
+.main {
+  @include span(8 of 12);
+}
+
 h1 {
   margin: 0;
   display: block;
