@@ -1,3 +1,62 @@
-@import "variables";
+$root-font-family: "Open Sans", sans-serif;
+$root-color: #262626;
+$bg-color-invert: #6441A5;
+$text-color-invert: #f1f1f1;
+
+$susy: (
+  columns: 12,
+  container: 1200px,
+  gutters: .25,
+  debug: (image: hide),
+  global-box-sizing: border-box
+);
+
 @import "../../bower_components/susy/sass/susy";
-@import "base";
+@import "../../bower_components/sanitize-css/sanitize.scss";
+
+a,
+a:link,
+a:active,
+a:hover,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+.wrapper {
+  @include container;
+}
+
+.header {
+  padding: 2em 1em;
+  height: 12em;
+  background-color: $bg-color-invert;
+  color: $text-color-invert;
+}
+
+.nav__list > li {
+  display: inline;
+  color: $text-color-invert;
+}
+
+.nav__item {
+  padding: .5em;
+}
+
+.nav__item--selected {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.main {
+  /* todo */
+  height: 26em;
+  padding: 2em 1em;
+  background-color: #f1f1f1;
+}
+
+.footer {
+  height: 4em;
+  background-color: #cc00ff;
+}
+

@@ -6,17 +6,29 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><%- title %> / <%- site %></title>
+  <title><%- title %> | <%- site %></title>
   <meta name="description" content="<%- description %>">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <div class="wrapper">
-  
-    <div class="main" role="main">
+    
+    <header class="header">
+      <a href="/">
+        <h1><%- site %></h1>
+      </a>
+      <p class="tagline"><%- description %></p>
+      <%- partial("_shared/_navigation") %>
+    </header>
+    
+    <main class="main">
       <%- yield %>
-    </div>
+    </main>
+    
+    <footer class="footer">
+    
+    </footer>
   
   </div>
   

@@ -1,10 +1,15 @@
 {
   "globals": {
     "site": "Chris Alexander",
-    "description": "",
+    "description": "Ramblings of a Londoner learning JavaScript",
     "url": "http://chrisalexander.me.uk",
     "service": {
       "analytics": "UA-36311374-1"
+    },
+    "social": {
+      "twitter": "shutotakahiro",
+      "linkedin": "calexanderuk",
+      "github": "chris-alexander"
     }
   }
 }
