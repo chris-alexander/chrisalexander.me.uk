@@ -1,0 +1,7 @@
+<nav class="nav">
+  <ul class="nav__list">
+    <li><a class="nav__item <%= current.source == 'about' ? 'nav__item--selected' : '' %>" href="/about">About</a></li>
+    <li><a class="nav__item <%= current.source == 'posts' ? 'nav__item--selected' : '' %>" href="/posts">Posts</a></li>
+    <li><a class="nav__item <%= current.source == 'portfolio' ? 'nav__item--selected' : '' %>"href="/portfolio">Portfolio</a></li>
+  </ul>
+</nav>

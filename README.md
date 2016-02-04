@@ -1,11 +1,12 @@
-# Harp, Gulp And BrowserSync
+# chrisalexander.me.uk
 
-A ready-to-go Gulp and Harp set up that does auto css injection via BrowserSync.
+Personal website built with Gulp and Harp set up that does auto css injection via BrowserSync. Based on the template created by @superhighfives
 
-You can set it via Harp with:
+## Current Toolset
 
-```console
-harp init src --boilerplate superhighfives/harp-gulp-browsersync-boilerplate
-```
-
-Then, success.
+- gulp
+- harp
+- browsersync
+- bower
+- susy.scss
+- sanitize.scss
