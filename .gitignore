@@ -1,4 +1,13 @@
-dist
+# OS
+.DS_Store
+
+# Logs
+logs
+*.log*
+
+# Dependency directories
 node_modules
 bower_components
-.DS_Store
+
+# Compile directory
+dist

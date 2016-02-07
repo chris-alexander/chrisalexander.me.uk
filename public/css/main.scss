@@ -1,7 +1,15 @@
-$root-font-family: "Open Sans", sans-serif;
+/* Sanitize.css overrides */
+
 $root-color: #262626;
-$bg-color-invert: #6441A5;
-$text-color-invert: #f1f1f1;
+$root-font-family: "Open Sans", sans-serif;
+$monospace-font-family: "Consolas", "Source Code Pro", monospace;
+
+/* Custom Vars */
+
+$header-text-color: #f1f1f1;
+$header-background-color: #6441A5;
+
+/* Grid Setup */
 
 $susy: (
   columns: 12,
@@ -24,19 +32,37 @@ a:visited {
 }
 
 .wrapper {
-  @include container;
+  /* @include container; */
 }
 
 .header {
   padding: 2em 1em;
-  height: 12em;
-  background-color: $bg-color-invert;
-  color: $text-color-invert;
+  height: 8em;
+  background-color: $header-background-color;
+  color: $header-text-color;
+}
+
+.header h1 {
+  font-size: 2em;
+}
+
+.masthead {
+  float: left;
+  &:after {
+    clear:both;
+  }
+}
+
+.header .nav {
+  float: right;
+  &:after {
+    clear: both;
+  }
 }
 
 .nav__list > li {
   display: inline;
-  color: $text-color-invert;
+  color: inherit;
 }
 
 .nav__item {
@@ -44,19 +70,33 @@ a:visited {
 }
 
 .nav__item--selected {
-  text-decoration: underline;
   font-weight: bold;
 }
 
 .main {
   /* todo */
-  height: 26em;
+  margin: 0 auto;
+  max-width: 35em;
   padding: 2em 1em;
-  background-color: #f1f1f1;
+}
+
+.main h1 {
+  /* do stuff */
+}
+
+.social {
+  margin: 0 auto;
+  width: 12em;
 }
 
 .footer {
-  height: 4em;
-  background-color: #cc00ff;
+  padding: 2em 1em;
+  font-size: .8em;
+}
+
+.footer .nav__item {
+  /* stuff here */
+  font-size: 2em;
+  padding-left: .3em;
 }
 

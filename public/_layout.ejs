@@ -9,17 +9,20 @@
   <title><%- title %> | <%- site %></title>
   <meta name="description" content="<%- description %>">
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
   <div class="wrapper">
     
     <header class="header">
-      <a href="/">
-        <h1><%- site %></h1>
-      </a>
-      <p class="tagline"><%- description %></p>
-      <%- partial("_shared/_navigation") %>
+      <div class="masthead">
+        <a href="/">
+          <h1><%- site %></h1>
+        </a>
+        <p class="tagline"><%- description %></p>
+      </div>
+      <%- partial("_shared/nav") %>
     </header>
     
     <main class="main">
@@ -27,7 +30,8 @@
     </main>
     
     <footer class="footer">
-    
+      <%- partial("_shared/social") %>
+      <p>&copy Chris Alexander</p>
     </footer>
   
   </div>

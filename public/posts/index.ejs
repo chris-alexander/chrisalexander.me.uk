@@ -1,0 +1,6 @@
+<% for (var slug in public.posts._data) { %>
+  <% if (slug !== "index") { %>
+    <h2><a href='/blog/<%= slug %>'><%= public.posts._data[slug].title %></a></h2>
+    <%- partial('blog/' + slug) %>
+  <% } %>
+<% } %>

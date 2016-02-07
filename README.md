@@ -1,6 +1,6 @@
 # chrisalexander.me.uk
 
-Personal website built with Gulp and Harp set up that does auto css injection via BrowserSync. Based on the template created by @superhighfives
+Personal website built with gulp and harp.
 
 ## Current Toolset
 
@@ -8,5 +8,5 @@ Personal website built with Gulp and Harp set up that does auto css injection vi
 - harp
 - browsersync
 - bower
-- susy.scss
+- susy.scss ?
 - sanitize.scss
