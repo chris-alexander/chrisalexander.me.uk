@@ -1,2 +1,12 @@
-<h1>Harp, Gulp And BrowserSync</h1>
-<h2>Also, you are doing a great job. Good for you.</h2>
+<h1>Recent Posts</h1>
+
+<ul>
+  <% for (var slug in public.posts._data) { %>
+    <% var post = public.posts._data[slug]; %>
+    <% if (slug !== "index" && post.published !== false) { %>
+      <li>
+        <a href='/posts/<%= slug %>'><%= post.title %></a>
+      </li>
+    <% } %>
+  <% } %>
+</ul>
