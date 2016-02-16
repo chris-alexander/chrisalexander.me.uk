@@ -1,63 +1,79 @@
+@import "../../bower_components/sanitize-css/sanitize.scss";
+@import "../../bower_components/compass-breakpoint/stylesheets/breakpoint";
+@import "../../bower_components/susy/sass/susy";
+
 /* Sanitize.css overrides */
 
+$root-font-size: 100%;
+$small-font-size: 75%;
+$root-line-height: 1.5;
 $root-color: #262626;
 $root-font-family: "Open Sans", sans-serif;
 $monospace-font-family: "Consolas", "Source Code Pro", monospace;
 
-/* Custom Vars */
+$root-background-color: #ffffff;
 
-$header-text-color: #f1f1f1;
-$header-background-color: #6441A5;
-
-/* Grid Setup */
+/* Susy Grid Setup */
 
 $susy: (
   columns: 12,
-  container: 1200px,
-  gutters: .25,
-  debug: (image: hide),
-  global-box-sizing: border-box
+  gutters: 1/4,
+  gutter-position: inside,
+  global-box-sizing: border-box,
+  debug: (image: hide)
 );
 
-@import "../../bower_components/susy/sass/susy";
-@import "../../bower_components/sanitize-css/sanitize.scss";
+@include border-box-sizing;
+
+/* Custom Vars */
+
+/* Breakpoints: Values from bootstrap 4 */
+$phone-ls: 34em;
+$tablet: 48em;
+$desktop: 62em;
+$extra-wide: 75em;
+
+$anchor-color: #2980b9;
+
+/* Mixins */
+
+@mixin cf {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+/* Styles */
+
+.wrapper {
+  @include container;
+}
 
 a,
 a:link,
 a:active,
 a:hover,
 a:visited {
-  color: inherit;
-  text-decoration: none;
+  color: $anchor-color;
 }
 
-.wrapper {
-  /* @include container; */
+header {
+  padding: 2em;
 }
 
-.header {
-  padding: 2em 1em;
-  height: 8em;
-  background-color: $header-background-color;
-  color: $header-text-color;
+main {
+  @include span(12);
+  padding: 2em;
 }
 
 .header h1 {
   font-size: 2em;
 }
 
-.titlebar {
-  float: left;
-  &:after {
-    clear:both;
-  }
-}
-
 .header .nav {
   float: right;
-  &:after {
-    clear: both;
-  }
 }
 
 .nav__list > li {
@@ -73,30 +89,21 @@ a:visited {
   font-weight: bold;
 }
 
-.main {
-  /* todo */
-  margin: 0 auto;
-  max-width: 35em;
-  padding: 2em 1em;
-}
-
-.main h1 {
-  /* do stuff */
-}
-
 .social {
-  margin: 0 auto;
-  width: 16em;
+  @include span(4 of 4);
+  @include breakpoint($tablet){
+    @include span(4 of 12 last);        
+  }
 }
 
 .footer {
-  padding: 2em 1em;
+  @include cf;
   font-size: .8em;
+  line-height: 2em;
 }
 
 .footer .nav__item {
-  /* stuff here */
   font-size: 2em;
-  padding: 1em .3em;
+  padding-right: .3em;
 }
 

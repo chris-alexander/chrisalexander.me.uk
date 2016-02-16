@@ -10,28 +10,29 @@
   <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-  <div class="wrapper">
     
-    <header class="header">
-      <div class="titlebar">
-        <a href="/">
-          <h1><%- site %></h1>
-        </a>
-        <p class="tagline"><%- description %></p>
-      </div>
+  <header class="header">
+    <div class="wrapper">
+      <a href="/">
+        <h1><%- site %></h1>
+      </a>
+      <p class="tagline"><%- description %></p>
       <%- partial("_shared/nav") %>
-    </header>
-    
-    <main class="main">
+    </div>
+  </header>
+  
+  <div class="wrapper">  
+    <main class="content">
       <%- yield %>
     </main>
-    
-    <footer class="footer">
+  </div>
+  
+  <footer class="footer">
+    <div class="wrapper">
       <%- partial("_shared/social") %>
       <p>Copyright &copy 2016 Chris Alexander</p>
-    </footer>
-  
-  </div>
+    </div>
+  </footer>
   
   <!-- Google Analytics -->
   <% if(service && service.analytics) { %>
