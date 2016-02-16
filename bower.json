@@ -15,7 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "susy": "~2.2.11",
-    "sanitize-css": "~3.0.0"
+    "susy": "^2.2.12",
+    "sanitize-css": "^3.2.0",
+    "compass-breakpoint": "breakpoint-sass#^2.6.1"
   }
 }
