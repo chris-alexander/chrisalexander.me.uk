@@ -1,11 +1,9 @@
-<h1>Recent Posts</h1>
-
 <ul>
   <% for (var slug in public.blog._data) { %>
     <% var article = public.blog._data[slug]; %>
     <% if (slug !== "index" && article.published !== false) { %>
       <li>
-        <a href='/posts/<%= slug %>'><%= article.title %></a>
+        <a href='/blog/<%= slug %>'><%= article.title %></a>
       </li>
     <% } %>
   <% } %>
