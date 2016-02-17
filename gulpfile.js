@@ -1,6 +1,6 @@
 var gulp        = require('gulp');
 var harp        = require('harp');
-var browserSync = require('browser-sync');
+var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
 var deploy      = require('gulp-gh-pages');
 var shell       = require('gulp-shell');
@@ -10,11 +10,15 @@ var shell       = require('gulp-shell');
  */
 gulp.task('serve', function () {
   harp.server(__dirname, {
-    port: 9000
+    port: 8081
   }, function () {
-    browserSync({
-      proxy: "localhost:9000",
+    browserSync.init({
+      proxy: "localhost:8081",
+      port: 8080,
       open: false,
+      ui: {
+        port: 8082
+      },
       /* Hide the notification. It gets annoying */
       notify: {
         styles: ['opacity: 0', 'position: absolute']
@@ -23,7 +27,7 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch("public/**/*.scss", function () {
+    gulp.watch("public/**/*.{scss,sass}", function () {
       reload("main.css", {stream: true});
     });
     /**
