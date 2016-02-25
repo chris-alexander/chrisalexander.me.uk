@@ -13,7 +13,7 @@ gulp.task('serve', function () {
     port: 8081
   }, function () {
     browserSync.init({
-      proxy: "localhost:8081",
+      proxy: 'localhost:8081',
       port: 8080,
       open: false,
       ui: {
@@ -27,16 +27,16 @@ gulp.task('serve', function () {
     /**
      * Watch for scss changes, tell BrowserSync to refresh main.css
      */
-    gulp.watch("public/**/*.{scss,sass}", function () {
-      reload("main.css", {stream: true});
+    gulp.watch('public/**/*.{scss,sass}', function () {
+      reload('main.css', {stream: true});
     });
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(["public/**/*.ejs", "public/**/*.js", "public/**/*.json", "public/**/*.md"], function () {
+    gulp.watch(['public/**/*.ejs', 'public/**/*.js', 'public/**/*.json', 'public/**/*.md'], function () {
       reload();
     });
-  })
+  });
 });
 
 /**
@@ -47,7 +47,7 @@ gulp.task('production', function () {
   return gulp.src('')
     .pipe(shell([
       'NODE_ENV=production sudo harp server --port 80'
-    ]))
+    ]));
 });
 
 /**
@@ -57,15 +57,15 @@ gulp.task('build', function () {
   return gulp.src('')
     .pipe(shell([
       'harp compile . dist'
-    ]))
+    ]));
 });
 
 /**
  * Push build to gh-pages
  */
 gulp.task('deploy', ['build'], function () {
-  return gulp.src("./dist/**/*")
-    .pipe(deploy())
+  return gulp.src('./dist/**/*')
+    .pipe(deploy());
 });
 
 /**

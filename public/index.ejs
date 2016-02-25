@@ -3,7 +3,7 @@
 <ul>
   <% for (var slug in public.blog._data) { %>
     <% var article = public.blog._data[slug]; %>
-    <% if (slug !== "index" && article.published !== false) { %>
+    <% if (slug !== 'index' && article.published !== false) { %>
       <li>
         <a href='/posts/<%= slug %>'><%= article.title %></a>
       </li>

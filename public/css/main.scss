@@ -4,6 +4,7 @@
 
 /* Sanitize.css overrides */
 
+/* --> Typography */
 $root-font-size: 100%;
 $small-font-size: 75%;
 $root-line-height: 1.5;
@@ -27,11 +28,11 @@ $susy: (
 
 /* Custom Vars */
 
-/* Breakpoints: Values from bootstrap 4 */
-$phone-ls: 34em;
-$tablet: 48em;
-$desktop: 62em;
-$extra-wide: 75em;
+/* Breakpoints: Values (from bootstrap 4) */
+$phone-ls: 34rem;
+$tablet: 48rem;
+$desktop: 62rem;
+$extra-wide: 75rem;
 
 $anchor-color: #2980b9;
 
@@ -40,7 +41,7 @@ $anchor-color: #2980b9;
 @mixin cf {
   &:after {
     content: "";
-    display: block;
+    display: table;
     clear: both;
   }
 }
@@ -49,6 +50,7 @@ $anchor-color: #2980b9;
 
 .wrapper {
   @include container;
+  padding: 1rem 2rem;
 }
 
 a,
@@ -59,30 +61,24 @@ a:visited {
   color: $anchor-color;
 }
 
-header {
-  padding: 2em;
-}
-
-main {
-  @include span(12);
-  padding: 2em;
-}
-
 .header h1 {
-  font-size: 2em;
+  font-size: 2rem;
 }
 
 .header .nav {
-  float: right;
+  float: left;
+  padding: .5rem;
+  // background-color: orange;
 }
 
 .nav__list > li {
-  display: inline;
-  color: inherit;
+  @include breakpoint($phone-ls) {
+    display: inline;
+  }
 }
 
 .nav__item {
-  padding: .5em;
+  padding-right: .75rem;
 }
 
 .nav__item--selected {
@@ -91,9 +87,13 @@ main {
 
 .social {
   @include span(4 of 4);
-  @include breakpoint($tablet){
-    @include span(4 of 12 last);        
+  @include breakpoint($tablet) {
+    @include span(4 of 12 last);
   }
+}
+
+.social .nav__list > li {
+  display: inline;
 }
 
 .footer {
@@ -106,4 +106,3 @@ main {
   font-size: 2em;
   padding-right: .3em;
 }
-
