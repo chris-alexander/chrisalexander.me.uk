@@ -1,7 +1,7 @@
 {
   "globals": {
     "site": "Chris Alexander",
-    "description": "Ramblings of a Londoner learning JavaScript",
+    "description": "A Londoner learning JavaScript",
     "url": "http://chrisalexander.me.uk",
     "service": {
       "analytics": "UA-36311374-1"

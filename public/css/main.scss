@@ -17,8 +17,10 @@ $root-background-color: #ffffff;
 /* Susy Grid Setup */
 
 $susy: (
-  columns: 12,
-  gutters: 1/4,
+  columns: 4,
+  container: 60rem,
+  container-position: center,
+  gutters: .25,
   gutter-position: inside,
   global-box-sizing: border-box,
   debug: (image: hide)
@@ -28,7 +30,7 @@ $susy: (
 
 /* Custom Vars */
 
-/* Breakpoints: Values (from bootstrap 4) */
+/* Breakpoints: Values from bootstrap 4 */
 $phone-ls: 34rem;
 $tablet: 48rem;
 $desktop: 62rem;
@@ -61,24 +63,33 @@ a:visited {
   color: $anchor-color;
 }
 
-.header h1 {
-  font-size: 2rem;
-}
-
-.header .nav {
-  float: left;
-  padding: .5rem;
-  // background-color: orange;
-}
-
-.nav__list > li {
+.header {
+  text-align: center;
   @include breakpoint($phone-ls) {
-    display: inline;
+    text-align: left;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .nav {
+    @include span(100%);
+    // background-color: orange;
+    @include breakpoint($phone-ls) {
+      @include span(6 of 12);
+    }
   }
 }
 
-.nav__item {
-  padding-right: .75rem;
+.nav__list > li {
+  // text-align: center;
+  @include breakpoint($phone-ls) {
+    display: inline-block;
+    // text-align: left;
+    padding-right: 1em;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .nav__item--selected {
@@ -86,23 +97,32 @@ a:visited {
 }
 
 .social {
-  @include span(4 of 4);
-  @include breakpoint($tablet) {
-    @include span(4 of 12 last);
+  @include span(100%);
+  text-align: center;
+  // background-color: pink;
+  .nav__list > li {
+    display: inline;
   }
-}
-
-.social .nav__list > li {
-  display: inline;
+  .nav__item {
+    font-size: 2em;
+    padding-right: .3em;
+  }
+  @include breakpoint($phone-ls) {
+    @include span(6 of 12 last);
+    text-align: right;
+  }
 }
 
 .footer {
   @include cf;
-  font-size: .8em;
+  font-size: .8rem;
   line-height: 2em;
-}
-
-.footer .nav__item {
-  font-size: 2em;
-  padding-right: .3em;
-}
+  .license {
+    @include span(100%);
+    text-align: center;
+    @include breakpoint($phone-ls) {
+      @include span(6 of 12);
+      text-align: right;
+    }
+  }
+} 
