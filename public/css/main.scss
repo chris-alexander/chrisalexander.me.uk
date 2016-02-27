@@ -21,7 +21,7 @@ $susy: (
   container: 60rem,
   container-position: center,
   gutters: .25,
-  gutter-position: inside,
+  gutter-position: after,
   global-box-sizing: border-box,
   debug: (image: hide)
 );
@@ -48,11 +48,25 @@ $anchor-color: #2980b9;
   }
 }
 
+@mixin centre-first ($pos:left) {
+  @include span(100%);
+  text-align: center;
+  @include breakpoint($phone-ls) {
+    @if $pos == "right" {
+      @include span(6 of 12 last);
+    } @else if $pos == "left" {
+      @include span(6 of 12);
+    }
+    text-align: $pos;
+  }
+}
+
 /* Styles */
 
 .wrapper {
   @include container;
-  padding: 1rem 2rem;
+  padding-left: 1.4rem;
+  padding-right: 1.4rem;
 }
 
 a,
@@ -63,28 +77,27 @@ a:visited {
   color: $anchor-color;
 }
 
-.header {
-  text-align: center;
-  @include breakpoint($phone-ls) {
-    text-align: left;
-  }
-  h1 {
-    font-size: 2rem;
-  }
-  .nav {
-    @include span(100%);
-    // background-color: orange;
-    @include breakpoint($phone-ls) {
-      @include span(6 of 12);
-    }
-  }
+h1 {
+  font-size: 2em;
+}
+
+.content {
+  font-size: .9rem;
+}
+
+.header,
+.content,
+.footer {
+  margin-top: 1.4rem;
+}
+
+.nav {
+  @include centre-first;
 }
 
 .nav__list > li {
-  // text-align: center;
   @include breakpoint($phone-ls) {
     display: inline-block;
-    // text-align: left;
     padding-right: 1em;
     &:last-child {
       padding-right: 0;
@@ -97,32 +110,21 @@ a:visited {
 }
 
 .social {
-  @include span(100%);
-  text-align: center;
-  // background-color: pink;
+  @include centre-first(right);
   .nav__list > li {
-    display: inline;
+    display: inline-block;
   }
   .nav__item {
-    font-size: 2em;
+    font-size: 1.6em;
     padding-right: .3em;
-  }
-  @include breakpoint($phone-ls) {
-    @include span(6 of 12 last);
-    text-align: right;
   }
 }
 
 .footer {
   @include cf;
-  font-size: .8rem;
-  line-height: 2em;
+  line-height: 2rem;
   .license {
-    @include span(100%);
-    text-align: center;
-    @include breakpoint($phone-ls) {
-      @include span(6 of 12);
-      text-align: right;
-    }
+    @include centre-first;
+    font-size: .8em;
   }
-} 
+}
