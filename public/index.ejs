@@ -1,14 +1,15 @@
 <%- partial("_intro") %>
 
 <h2>Recent Posts</h2>
-
-<ul>
-  <% for (var slug in public.blog._data) { %>
-    <% var article = public.blog._data[slug]; %>
-    <% if (slug !== 'index' && article.published !== false) { %>
-      <li>
-        <a href='/posts/<%= slug %>'><%= article.title %></a>
-      </li>
+<div>
+  <ul>
+    <% for (var slug in public.blog._data) { %>
+      <% var article = public.blog._data[slug]; %>
+      <% if (slug !== 'index' && article.published !== false) { %>
+        <li>
+          <a href='/posts/<%= slug %>'><%= article.title %></a>
+        </li>
+      <% } %>
     <% } %>
-  <% } %>
-</ul>
+  </ul>
+</div>

@@ -2,23 +2,46 @@
 @import "../../bower_components/compass-breakpoint/stylesheets/breakpoint";
 @import "../../bower_components/susy/sass/susy";
 
-/* Sanitize.css overrides */
+// Fonts
+$sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
+$serif:      Georgia, Times, 'Times New Roman', serif;
+$headings:    'Lato', $sans-serif;
+$monospace:  'Source Code Pro', Consolas, 'Courier New', monospace;
 
-/* --> Typography */
+//Sanitize.scss overrides
+//Root
+$root-box-sizing: border-box;
+$root-cursor: default;
+$root-font-family: $sans-serif;
 $root-font-size: 100%;
-$small-font-size: 75%;
-$root-line-height: 1.5;
-$root-color: #262626;
-$root-font-family: "Open Sans", sans-serif;
-$monospace-font-family: "Consolas", "Source Code Pro", monospace;
+$root-line-height: 1.45;
+$root-text-rendering: optimizeLegibility;
 
-$root-background-color: #ffffff;
+//More
+$anchor-text-decoration:        none;
+$form-element-background-color: transparent;
+$form-element-min-height:       if(unitless($root-line-height), $root-line-height * 1em, if(unit($root-line-height) != '%', $root-line-height, null));
+$media-element-vertical-align:  middle;
+$monospace-font-family:         $monospace;
+$nav-list-style:                none;
+$selection-background-color:    #b3d4fc;
+$selection-text-shadow:         none;
+$small-font-size:               74.2%;
+$big-font-size:                 148.4%;
+$table-border-collapse:         collapse;
+$table-border-spacing:          0;
+$textarea-resize:               vertical;
 
-/* Susy Grid Setup */
+// Breakpoints (Values from bootstrap 4)
+$phone-ls: 34rem;
+$tablet: 48rem;
+$desktop: 62rem;
+$extra-wide: 75rem;
 
+//Susy
 $susy: (
   columns: 4,
-  container: 60rem,
+  container: 46rem,
   container-position: center,
   gutters: .25,
   gutter-position: after,
@@ -28,17 +51,17 @@ $susy: (
 
 @include border-box-sizing;
 
-/* Custom Vars */
-
-/* Breakpoints: Values from bootstrap 4 */
-$phone-ls: 34rem;
-$tablet: 48rem;
-$desktop: 62rem;
-$extra-wide: 75rem;
-
+//Links
 $anchor-color: #2980b9;
 
-/* Mixins */
+//Typography
+$font-size-h1:    2.969em;
+$font-size-h2:    2em;
+$font-size-large: 1.484em;
+$font-size-base:  1rem;
+$font-size-small: .742em;
+
+//Mixins
 
 @mixin cf {
   &:after {
@@ -78,16 +101,18 @@ a:visited {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: $font-size-h1;
 }
 
-.header,
-.content,
-.footer {
+header,
+main,
+section,
+footer {
   margin-top: 1.4rem;
 }
 
 .content {
+  font-size: 1rem;
   p,
   h2 {
     margin-top: 1.4em;
@@ -105,11 +130,13 @@ h1 {
 }
 
 .nav__list > li {
-  font-size: 1.4em;
+  font-size: $font-size-large;
   line-height: 2;
+  border-bottom: 1px solid rgba(0,0,0,.12);
   @include breakpoint($phone-ls) {
     font-size: $root-font-size;
     display: inline-block;
+    border-bottom: 0;
     padding-right: 1em;
     &:last-child {
       padding-right: 0;
@@ -137,6 +164,6 @@ h1 {
   line-height: 2rem;
   .license {
     @include centre-first;
-    font-size: .8em;
+    font-size: $font-size-small;
   }
 }
