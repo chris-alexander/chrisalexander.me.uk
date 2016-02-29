@@ -1,12 +1,13 @@
 # chrisalexander.me.uk
 
-Personal website built with gulp and harp.
+Personal website built with gulp and Harp.
 
 ## Current Toolset
 
 - gulp
-- harp
+- Harp
 - browsersync
 - bower
-- susy.scss ?
-- sanitize.scss
+- Susy
+- Breakpoint
+- sanitize.css
