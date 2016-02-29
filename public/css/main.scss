@@ -81,14 +81,23 @@ h1 {
   font-size: 2em;
 }
 
-.content {
-  font-size: .9rem;
-}
-
 .header,
 .content,
 .footer {
   margin-top: 1.4rem;
+}
+
+.content {
+  p, h1, h2 {
+    margin-top: 1.4em;
+  }
+  h1 {
+    font-size: 1.6em;
+    line-height: 2;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
 }
 
 .nav {
@@ -96,7 +105,10 @@ h1 {
 }
 
 .nav__list > li {
+  font-size: 1.4em;
+  line-height: 2;
   @include breakpoint($phone-ls) {
+    font-size: $root-font-size;
     display: inline-block;
     padding-right: 1em;
     &:last-child {

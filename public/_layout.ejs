@@ -6,16 +6,15 @@
   <title><%- title %> | <%- site %></title>
   <meta name="description" content="<%- description %>">
   <meta name="viewport" content="width=device-width">
+  <!-- styles -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     
   <header class="header">
     <div class="wrapper">
-      <a href="/">
-        <h1><%- site %></h1>
-      </a>
+      <h1><a href="/"><%- site %></a></h1>
       <p class="tagline"><%- description %></p>
       <%- partial("_shared/nav") %>
     </div>
