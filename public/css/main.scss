@@ -53,12 +53,13 @@ $susy: (
 
 //Links
 $anchor-color: #2980b9;
+$anchor-hover: darken($anchor-color, 15%);
 
 //Typography
 $font-size-h1:    2.969em;
 $font-size-h2:    2em;
 $font-size-large: 1.484em;
-$font-size-base:  1rem;
+$font-size-base:  1em;
 $font-size-small: .742em;
 
 //Mixins
@@ -95,9 +96,12 @@ $font-size-small: .742em;
 a,
 a:link,
 a:active,
-a:hover,
 a:visited {
   color: $anchor-color;
+}
+
+a:hover {
+  color: $anchor-hover;
 }
 
 h1 {
@@ -111,17 +115,26 @@ footer {
   margin-top: 1.4rem;
 }
 
+header {
+  h1, p {
+    text-align: center;
+    @include breakpoint($phone-ls) {
+      text-align: left;
+    }
+  }
+}
+
 .content {
-  font-size: 1rem;
+  font-size: $font-size-base;
   p,
   h2 {
     margin-top: 1.4em;
   }
   h1 {
-    font-size: 1.6em;
+    font-size: $font-size-h2;
   }
   h2 {
-    font-size: 1.2em;
+    font-size: $font-size-large;
   }
 }
 
@@ -152,9 +165,10 @@ footer {
   @include centre-first(right);
   .nav__list > li {
     display: inline-block;
+    border-bottom: 0;
   }
   .nav__item {
-    font-size: 1.6em;
+    font-size: $font-size-large;
     padding-right: .3em;
   }
 }
