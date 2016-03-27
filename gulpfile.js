@@ -1,9 +1,9 @@
-var gulp        = require('gulp');
-var harp        = require('harp');
-var browserSync = require('browser-sync').create();
-var reload      = browserSync.reload;
-var deploy      = require('gulp-gh-pages');
-var shell       = require('gulp-shell');
+var gulp   = require('gulp');
+var harp   = require('harp');
+var sync   = require('browser-sync').create();
+var reload = sync.reload;
+var surge = require('gulp-surge');
+var shell  = require('gulp-shell');
 
 /**
  * Serve the Harp Site from the src directory
@@ -12,7 +12,7 @@ gulp.task('serve', function () {
   harp.server(__dirname, {
     port: 8081
   }, function () {
-    browserSync.init({
+    sync.init({
       proxy: 'localhost:8081',
       port: 8080,
       open: false,
@@ -64,8 +64,10 @@ gulp.task('build', function () {
  * Push build to gh-pages
  */
 gulp.task('deploy', ['build'], function () {
-  return gulp.src('./dist/**/*')
-    .pipe(deploy());
+  return surge({
+    project: './dist',
+    domain: 'chrisalexander.me.uk'
+  });
 });
 
 /**
