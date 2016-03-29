@@ -7,8 +7,6 @@ logs
 
 # Dependency directories
 node_modules
-bower_components
 
 # Compile directory
 dist
-.publish
