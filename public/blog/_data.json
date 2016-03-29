@@ -5,5 +5,9 @@
   "hello-world": {
    "title": "Hello World",
    "published": false
-  } 
+ },
+ "learning-how-to-learn": {
+   "title": "Learning How to Learn",
+   "published": false
+ }
 }

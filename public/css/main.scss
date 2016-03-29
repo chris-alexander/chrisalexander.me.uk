@@ -1,6 +1,6 @@
-@import "../../bower_components/sanitize-css/sanitize.scss";
-@import "../../bower_components/compass-breakpoint/stylesheets/breakpoint";
-@import "../../bower_components/susy/sass/susy";
+@import "../../node_modules/sanitize.css/sanitize.scss";
+@import "../../node_modules/breakpoint-sass/stylesheets/breakpoint";
+@import "../../node_modules/susy/sass/susy";
 
 // Fonts
 $sans-serif: 'Open Sans', 'Helvetica Neue', Helvetica, 'Lucida Grande', sans-serif;
@@ -51,6 +51,10 @@ $susy: (
 
 @include border-box-sizing;
 
+//Colors
+$font-color-main: #000000;
+$bkgr-color-main: #ffffff;
+
 //Links
 $anchor-color: #2980b9;
 $anchor-hover: darken($anchor-color, 15%);
@@ -85,7 +89,7 @@ $font-size-small: .742em;
   }
 }
 
-/* Styles */
+//Styles
 
 .wrapper {
   @include container;
