@@ -1,0 +1,10 @@
+nav.nav(role="navigation")
+  ul.nav__list
+    li
+      a.nav__item(href="/") Home
+    li
+      a.nav__item(class={"nav__item--selected": current.source === 'about'}, href="/about") About
+    li
+      a.nav__item(class={"nav__item--selected": current.source === 'blog'}, href="/blog") Blog
+    li
+      a.nav__item(class={"nav__item--selected": current.source === 'portfolio'}, href="/portfolio") Portfolio

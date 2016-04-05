@@ -2,7 +2,7 @@ var gulp   = require('gulp');
 var harp   = require('harp');
 var sync   = require('browser-sync').create();
 var reload = sync.reload;
-var surge = require('gulp-surge');
+var surge  = require('gulp-surge');
 var shell  = require('gulp-shell');
 
 /**
@@ -33,7 +33,7 @@ gulp.task('serve', function () {
     /**
      * Watch for all other changes, reload the whole page
      */
-    gulp.watch(['public/**/*.ejs', 'public/**/*.js', 'public/**/*.json', 'public/**/*.md'], function () {
+    gulp.watch(['public/**/*.{jade,ejs}', 'public/**/*.js', 'public/**/*.json', 'public/**/*.md'], function () {
       reload();
     });
   });

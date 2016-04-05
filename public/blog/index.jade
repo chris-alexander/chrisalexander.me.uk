@@ -1,0 +1,7 @@
+h1 Articles
+div
+  ul
+    each article, slug in public.blog._data
+      if slug !== "index" && article.published !== false
+        li
+          a(href="/blog/#{ slug }") #{ article.title }
