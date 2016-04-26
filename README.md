@@ -2,12 +2,13 @@
 
 Personal website built with gulp and Harp.
 
-## Current Toolset
+## Built with:
 
 - gulp
 - Harp
-- browsersync
-- bower
+- browser-sync
+- Jade
+- Sanitize.css
 - Susy
 - Breakpoint
-- sanitize.css
+
