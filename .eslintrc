@@ -1,6 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": ["xo-space", "xo-react/space"],
+  "env": {
+    "browser": true
+  },
   "rules": {
     "react/jsx-filename-extension": [0],
     "react/no-danger": [0]
