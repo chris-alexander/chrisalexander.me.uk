@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["xo-space", "xo-react/space"],
+  "rules": {
+    "react/jsx-filename-extension": [0],
+    "react/no-danger": [0]
+  },
+  "globals": {
+    "__PREFIX_LINKS__": true
+  }
+}
