@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, PropTypes} from 'react';
 import {Link} from 'react-router';
 import {prefixLink} from 'gatsby-helpers';
 import {prune, include as includes} from 'underscore.string';
@@ -49,8 +49,8 @@ class ReadNext extends Component {
 }
 
 ReadNext.propTypes = {
-  post: React.PropTypes.object.isRequired,
-  pages: React.PropTypes.array
+  post: PropTypes.object.isRequired,
+  pages: PropTypes.array
 };
 
 export default ReadNext;
