@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import Helmet from 'react-helmet';
 import {prefixLink} from 'gatsby-helpers';
 
@@ -7,7 +7,7 @@ const BUILD_TIME = new Date().getTime();
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
-    body: React.PropTypes.string
+    body: PropTypes.string
   },
   render() {
     const {body} = this.props;

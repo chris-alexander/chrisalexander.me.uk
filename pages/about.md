@@ -1,3 +1,6 @@
-# About Chris
+--
+title: About Chris
+path: "/about/"
+--
 
 I am a Londoner self-studying Full Stack Web Development using the [FreeCodeCamp](http://freecodecamp.com) curriculum.
