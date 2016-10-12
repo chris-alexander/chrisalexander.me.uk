@@ -7,3 +7,8 @@ authorBio = "Written by <strong>Chris Alexander</strong>"
 linkPrefix = "/"
 gaCode = "UA-36311374-1"
 # kommentsCode = ""
+[social]
+github = "chris-alexander"
+codepen = "chrisalexander"
+twitter = "ShutoTakahiro"
+linkedin = "calexanderuk"
