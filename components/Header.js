@@ -6,14 +6,14 @@ import {config} from 'config';
 import Navigation from './Navigation';
 
 const Header = () => (
-  <header className="header">
-    <div className="wrapper">
+  <header>
+    <div>
       <h1>
         <Link to={prefixLink('/')}>
           {config.blogTitle}
         </Link>
       </h1>
-      <p className="tagline">{config.subTitle}</p>
+      <p>{config.subTitle}</p>
       <Navigation/>
     </div>
   </header>

@@ -3,29 +3,29 @@ import {Link, IndexLink} from 'react-router';
 import {prefixLink} from 'gatsby-helpers';
 
 const Navigation = () => (
-  <nav className="nav" role="navigation">
-    <ul className="nav__list">
-      <li className="nav__item">
+  <nav>
+    <ul>
+      <li>
         <IndexLink
-          activeClassName="nav__item--selected"
+          activeClassName="active"
           to={prefixLink('/')}
           >Home</IndexLink>
       </li>
-      <li className="nav__item">
+      <li>
         <Link
-          activeClassName="nav__item--selected"
+          activeClassName="active"
           to={prefixLink('/about')}
           >About</Link>
       </li>
-      <li className="nav__item">
+      <li>
         <Link
-          activeClassName="nav__item--selected"
+          activeClassName="active"
           to={prefixLink('/Blog')}
           >Blog</Link>
       </li>
-      <li className="nav__item">
+      <li>
         <Link
-          activeClassName="nav__item--selected"
+          activeClassName="active"
           to={prefixLink('/portfolio')}
           >Portfolio</Link>
       </li>

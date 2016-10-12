@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Footer = () => (
-  <footer className="footer">
-    <div className="wrapper">
-      <p className="licence">
+  <footer>
+    <div>
+      <p>
         Copyright &copy 2016 Chris Alexander
       </p>
     </div>
