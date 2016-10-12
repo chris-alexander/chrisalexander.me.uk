@@ -1,9 +1,0 @@
-!= partial("_intro")
-
-h2 Recent Posts
-div
-  ul
-    each article, slug in public.blog._data
-      if slug !== 'index' && article.published !== false
-        li
-          a(href="/posts/#{ slug }") #{ article.title }
