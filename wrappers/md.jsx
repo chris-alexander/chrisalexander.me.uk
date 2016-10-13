@@ -3,7 +3,6 @@ import moment from 'moment';
 import Helmet from 'react-helmet';
 import ReadNext from '../components/ReadNext';
 import { config } from '../config';
-import Bio from '../components/Bio';
 
 import '../css/zenburn.css';
 
@@ -21,7 +20,6 @@ const MarkdownWrapper = ({ route }) => {
       </em>
       <hr />
       <ReadNext post={post} pages={route.pages} />
-      <Bio />
     </div>
   );
 };

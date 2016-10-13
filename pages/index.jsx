@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 import access from 'safe-access';
 import { config } from '../config';
 import include from 'underscore.string/include'; // eslint-disable-line
-import Bio from '../components/Bio';
 
 const BlogIndex = (props) => {
   const pageLinks = [];
@@ -32,7 +31,6 @@ const BlogIndex = (props) => {
           { name: 'keywords', content: 'blog, articles' },
         ]}
       />
-      <Bio />
       <ul>
         {pageLinks}
       </ul>

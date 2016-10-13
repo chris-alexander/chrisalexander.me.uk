@@ -7,8 +7,8 @@ import Navigation from './Navigation';
 
 const Header = () => (
   <header className="tc pv4 pv5-ns">
-    <h1 className="mt2 mb0 fw1 f1 black-80">
-      <Link className="link" to={prefixLink('/')}>
+    <h1 className="mt2 mb0 fw1 f1">
+      <Link className="link black-80" to={prefixLink('/')}>
         { config.blogTitle }
       </Link>
     </h1>
