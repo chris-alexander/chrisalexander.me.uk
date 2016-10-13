@@ -6,16 +6,14 @@ import {config} from 'config';
 import Navigation from './Navigation';
 
 const Header = () => (
-  <header>
-    <div>
-      <h1>
-        <Link to={prefixLink('/')}>
-          {config.blogTitle}
-        </Link>
-      </h1>
-      <p>{config.subTitle}</p>
-      <Navigation/>
-    </div>
+  <header className="tc pv4 pv5-ns">
+    <h1 className="mt2 mb0 fw1 f1 black-80">
+      <Link className="link" to={prefixLink('/')}>
+        {config.blogTitle}
+      </Link>
+    </h1>
+    <h2 className="mt2 mb0 f6 fw4 ttu tracked">{config.subTitle}</h2>
+    <Navigation/>
   </header>
 );
 
