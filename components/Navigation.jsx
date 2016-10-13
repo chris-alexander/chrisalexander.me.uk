@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link, IndexLink} from 'react-router';
-import {prefixLink} from 'gatsby-helpers';
+import { Link, IndexLink } from 'react-router';
+import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 
 const Navigation = () => (
   <nav className="bt bb tc mw7 center mt4">
@@ -8,22 +8,22 @@ const Navigation = () => (
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
       to={prefixLink('/')}
-      >Home</IndexLink>
+    >Home</IndexLink>
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
       to={prefixLink('/portfolio/')}
-      >Portfolio</Link>
+    >Portfolio</Link>
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
       to={prefixLink('/articles/')}
-      >Articles</Link>
+    >Articles</Link>
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
       to={prefixLink('/about/')}
-      >About</Link>
+    >About</Link>
   </nav>
 );
 

@@ -1,43 +1,17 @@
-import React, {PropTypes} from 'react';
-import {Link} from 'react-router';
-import {Container} from 'react-responsive-grid';
-import {prefixLink} from 'gatsby-helpers';
-import {config} from 'config';
+import React, { PropTypes } from 'react';
 
-import Header from 'components/Header';
+import Header from '../components/Header';
 import 'tachyons';
 
-const Template = props => {
-  const {location, children} = props;
-  // let header;
-  // if (location.pathname === prefixLink('/')) {
-  //   header = (
-  //     <h1>
-  //       <Link to={prefixLink('/')}>
-  //         {config.blogTitle}
-  //       </Link>
-  //     </h1>
-  //   );
-  // } else {
-  //   header = (
-  //     <h3>
-  //       <Link to={prefixLink('/')}>
-  //         {config.blogTitle}
-  //       </Link>
-  //     </h3>
-  //   );
-  // }
-  return (
-    <Container>
-      <Header/>
-      {children}
-    </Container>
-  );
-};
+const Template = props => (
+  <div>
+    <Header />
+    { props.children }
+  </div>
+);
 
 Template.propTypes = {
-  children: PropTypes.any,
-  location: PropTypes.object
+  children: PropTypes.node,
 };
 
 export default Template;

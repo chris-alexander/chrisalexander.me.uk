@@ -1,56 +1,54 @@
-import React, {Component, PropTypes} from 'react';
-import {Link} from 'react-router';
-import {prefixLink} from 'gatsby-helpers';
-import {prune, include as includes} from 'underscore.string';
+import React, { PropTypes } from 'react';
+import { Link } from 'react-router';
+import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
+import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
 
-class ReadNext extends Component {
-  render() {
-    const {pages, post} = this.props;
-    const {readNext} = post;
-    let nextPost;
-    if (readNext) {
-      nextPost = find(pages, page =>
-        includes(page.path, readNext)
-      );
-    }
-    if (!nextPost) {
-      return React.createElement('noscript', null);
-    }
+const ReadNext = (props) => {
+  const { pages, post } = props;
+  const { readNext } = post;
+  let nextPost;
+  if (readNext) {
     nextPost = find(pages, page =>
-      includes(page.path, readNext.slice(1, -1))
-    );
-    // Create pruned version of the body.
-    const html = nextPost.data.body;
-    const body = prune(html.replace(/<[^>]*>/g, ''), 200);
-
-    return (
-      <div>
-        <h6>
-          READ THIS NEXT:
-        </h6>
-        <h3>
-          <Link
-            to={{
-              pathname: prefixLink(nextPost.path),
-              query: {
-                readNext: true
-              }
-            }}
-            >
-            {nextPost.data.title}
-          </Link>
-        </h3>
-        <p>{body}</p>
-        <hr/>
-      </div>
+      includes(page.path, readNext)
     );
   }
-}
+  if (!nextPost) {
+    return React.createElement('noscript', null);
+  }
+  nextPost = find(pages, page =>
+    includes(page.path, readNext.slice(1, -1))
+  );
+  // Create pruned version of the body.
+  const html = nextPost.data.body;
+  const body = prune(html.replace(/<[^>]*>/g, ''), 200);
+
+  return (
+    <div>
+      <h6>
+        READ THIS NEXT:
+      </h6>
+      <h3>
+        <Link
+          to={{
+            pathname: prefixLink(nextPost.path),
+            query: {
+              readNext: true,
+            },
+          }}
+        >
+          {nextPost.data.title}
+        </Link>
+      </h3>
+      <p>{body}</p>
+      <hr />
+    </div>
+  );
+};
 
 ReadNext.propTypes = {
   post: PropTypes.object.isRequired,
-  pages: PropTypes.array
+  pages: PropTypes.array,
 };
 
 export default ReadNext;
