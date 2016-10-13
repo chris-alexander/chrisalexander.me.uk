@@ -12,17 +12,17 @@ const Navigation = () => (
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
-      to={prefixLink('/portfolio')}
+      to={prefixLink('/portfolio/')}
       >Portfolio</Link>
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
-      to={prefixLink('/articles')}
+      to={prefixLink('/articles/')}
       >Articles</Link>
     <Link
       className="f6 f5-l link bg-animate black-80 dib pa3 ph4-l"
       activeClassName="active"
-      to={prefixLink('/about')}
+      to={prefixLink('/about/')}
       >About</Link>
   </nav>
 );
