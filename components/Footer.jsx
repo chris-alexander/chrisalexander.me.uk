@@ -1,12 +1,12 @@
 import React from 'react';
+import SocialLinks from './SocialLinks';
 
 const Footer = () => (
-  <footer>
-    <div>
-      <p>
-        Copyright &copy 2016 Chris Alexander
-      </p>
-    </div>
+  <footer className="pv4 ph3 ph5-ns tc">
+    <SocialLinks />
+    <p>
+      &copy; { new Date().getFullYear() } Chris Alexander
+    </p>
   </footer>
 );
 
