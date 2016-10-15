@@ -1,13 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import SafeLink from './SafeLink';
 import social from '../consts/social';
-
-const SafeLink = props => (
-  <a {...props} target="_blank" rel="noopener noreferrer">{props.children}</a>
-);
-
-SafeLink.propTypes = {
-  children: PropTypes.node,
-};
 
 const SocialLinks = props => (
   <div {...props}>
