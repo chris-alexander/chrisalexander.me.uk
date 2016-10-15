@@ -9,12 +9,18 @@ SafeLink.propTypes = {
   children: PropTypes.node,
 };
 
-const SocialLinks = () => (
-  <ul>
-    { social.map((item, index) => (
-      <li><SafeLink key={index} href={item.link}>{item.name}</SafeLink></li>
+const SocialLinks = props => (
+  <div {...props}>
+    { social.map(item => (
+      <SafeLink
+        className="link dim black-80 dib pa2"
+        key={item.name}
+        href={item.link}
+      >
+        {item.name}
+      </SafeLink>
     )) }
-  </ul>
+  </div>
 );
 
 export default SocialLinks;

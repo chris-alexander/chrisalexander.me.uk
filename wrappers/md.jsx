@@ -1,7 +1,6 @@
 import React, { PropTypes } from 'react';
 import moment from 'moment';
 import Helmet from 'react-helmet';
-import ReadNext from '../components/ReadNext';
 import { config } from '../config';
 
 import '../css/zenburn.css';
@@ -9,18 +8,16 @@ import '../css/zenburn.css';
 const MarkdownWrapper = ({ route }) => {
   const post = route.page.data;
   return (
-    <div className="markdown">
+    <article className="pa3 pa5-ns markdown">
       <Helmet
         title={`${post.title} | ${config.blogTitle}`}
       />
-      <h1 style={{ marginTop: 0 }}>{post.title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: post.body }} />
+      <h1>{post.title}</h1>
+      <section className="f5 lh-copy measure" dangerouslySetInnerHTML={{ __html: post.body }} />
       <em>
-        Posted {moment(post.date).format('MMMM D, YYYY')}
+        {`Posted ${moment(post.date).format('MMMM D, YYYY')}`}
       </em>
-      <hr />
-      <ReadNext post={post} pages={route.pages} />
-    </div>
+    </article>
   );
 };
 
