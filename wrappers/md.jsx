@@ -8,16 +8,18 @@ import '../css/zenburn.css';
 const MarkdownWrapper = ({ route }) => {
   const post = route.page.data;
   return (
-    <article className="pa3 pa5-ns markdown">
+    <main className="markdown">
       <Helmet
         title={`${post.title} | ${config.blogTitle}`}
       />
-      <h1>{post.title}</h1>
-      <section className="f5 lh-copy measure" dangerouslySetInnerHTML={{ __html: post.body }} />
-      <em>
-        {`Posted ${moment(post.date).format('MMMM D, YYYY')}`}
-      </em>
-    </article>
+      <article className="center measure-wide f5 pv5 lh-copy ph2">
+        <h1 className="f1 lh-title">{post.title}</h1>
+        { (!post.date) ? '' : <time>
+          {moment(post.date).format('MMMM D, YYYY')}
+        </time>}
+        <div dangerouslySetInnerHTML={{ __html: post.body }} />
+      </article>
+    </main>
   );
 };
 
