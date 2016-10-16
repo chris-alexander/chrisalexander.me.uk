@@ -4,13 +4,14 @@ import social from '../consts/social';
 
 const SocialLinks = props => (
   <div {...props}>
-    { social.map(item => (
+    { social.map(network => (
       <SafeLink
-        className="link dim black-80 dib pa2"
-        key={item.name}
-        href={item.link}
+        className="link dim black-80 dib pa2 f3"
+        key={network.name}
+        title={network.name}
+        href={network.link}
       >
-        {item.name}
+        <network.icon />
       </SafeLink>
     )) }
   </div>
