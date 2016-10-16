@@ -7,7 +7,7 @@ import access from 'safe-access';
 import { config } from '../config';
 import include from 'underscore.string/include'; // eslint-disable-line
 
-const MainIndex = (props) => {
+const BlogIndex = (props) => {
   const pageLinks = [];
   // Sort pages.
   const sortedPages = sortBy(props.route.pages, page => access(page, 'data.date')
@@ -23,7 +23,7 @@ const MainIndex = (props) => {
     }
   });
   return (
-    <div className="center">
+    <div className="ph3 ph4-m ph5-l center">
       <Helmet
         title={config.blogTitle}
         meta={[
@@ -31,15 +31,15 @@ const MainIndex = (props) => {
           { name: 'keywords', content: 'blog, articles' },
         ]}
       />
-      <ul>
+      <ul className="list">
         {pageLinks}
       </ul>
     </div>
   );
 };
 
-MainIndex.propTypes = {
+BlogIndex.propTypes = {
   route: PropTypes.object,
 };
 
-export default MainIndex;
+export default BlogIndex;
