@@ -3,7 +3,7 @@ import moment from 'moment';
 import Helmet from 'react-helmet';
 import { config } from '../config';
 
-import '../css/zenburn.css';
+import '../css/highlight.css';
 
 const MarkdownWrapper = ({ route }) => {
   const post = route.page.data;
