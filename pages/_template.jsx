@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 import 'tachyons';
 
 const Template = props => (
-  <div>
+  <div className="container center ph3">
     <Header />
     { props.children }
     <Footer />

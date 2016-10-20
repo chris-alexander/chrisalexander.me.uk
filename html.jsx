@@ -26,7 +26,7 @@ const HTML = (props) => {
         {head.meta.toComponent()}
         {css}
       </head>
-      <body className="landing-page">
+      <body className="pt4 pt5-ns pb5">
         <div id="react-mount" dangerouslySetInnerHTML={{ __html: body }} />
         <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
       </body>
