@@ -13,11 +13,18 @@ const MarkdownWrapper = ({ route }) => {
         title={`${post.title} | ${config.blogTitle}`}
       />
       <article className="center measure-wide f5 pv5 lh-copy ph2">
-        <h1 className="f1 lh-title">{post.title}</h1>
-        { (!post.date) ? '' : <time>
-          {moment(post.date).format('MMMM D, YYYY')}
-        </time>}
-        <div dangerouslySetInnerHTML={{ __html: post.body }} />
+        <header className="mb4">
+          <h1 className="mt0 mb1 f2 lh-title">{post.title}</h1>
+          <div className="mb2">
+            { (!post.date) ? '' : <time dateTime={post.date}>
+              {moment(post.date).format('DD MMM YYYY')}
+            </time>}
+          </div>
+        </header>
+        <section
+          className="mb6 lh-copy"
+          dangerouslySetInnerHTML={{ __html: post.body }}
+        />
       </article>
     </main>
   );

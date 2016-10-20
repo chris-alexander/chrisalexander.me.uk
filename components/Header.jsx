@@ -6,13 +6,12 @@ import { config } from '../config';
 import Navigation from './Navigation';
 
 const Header = () => (
-  <header className="tc pv4 pv5-ns">
-    <h1 className="mt2 mb0 fw1 f1">
-      <Link className="link black-80" to={prefixLink('/')}>
+  <header className="ph3 center tc">
+    <h1 className="mt2 mb0 fw1 f1 lh-solid black">
+      <Link className="link black" to={prefixLink('/')}>
         { config.blogTitle }
       </Link>
     </h1>
-    <h2 className="mt2 mb0 f6 fw4 ttu tracked">{ config.subTitle }</h2>
     <Navigation />
   </header>
 );
