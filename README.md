@@ -1,14 +1,9 @@
 # chrisalexander.me.uk
 
-Personal website built with gulp and Harp.
+Personal website built using the Gatsby starter blog
 
-## Built with:
+Install this starter (assuming Gatsby is installed) by running from your CLI:
+`gatsby new gatsby-blog https://github.com/gatsbyjs/gatsby-starter-blog`
 
-- gulp
-- Harp
-- browser-sync
-- Jade
-- Sanitize.css
-- Susy
-- Breakpoint
-
+## Running in development
+`gatsby develop`
