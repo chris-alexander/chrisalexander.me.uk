@@ -2,14 +2,32 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 import Helmet from 'react-helmet';
 import { config } from '../config';
+import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 
-import '../css/highlight.css';
+import '../css/zenburn.css';
 
-const MarkdownWrapper = ({ route }) => {
+const MarkdownWrapper = (props) => {
+  const { route } = props;
   const post = route.page.data;
+  const postUrl = config.blogUrl.slice(0, -1) + prefixLink(post.path);
+  const summary = post.summary; // need to write function to extract
+  const feature = post.feature; // featured image, full URL
   return (
-    <main className="markdown">
+    <main>
       <Helmet
+        meta={[
+          { property: 'og:url', content: postUrl },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:title', content: post.title },
+          { property: 'og:description', content: summary },
+          { property: 'og:image', content: feature },
+          { property: 'twitter:card', content: 'summary_large_image' },
+          { property: 'twitter:site', content: config.authorTwitter },
+          { property: 'twitter:creator', content: config.authorTwitter },
+          { property: 'twitter:title', content: post.title },
+          { property: 'twitter:description', content: summary },
+          { property: 'twitter:image', content: feature },
+        ]}
         title={`${post.title} | ${config.blogTitle}`}
       />
       <article className="center measure-wide f5 pv5 lh-copy ph2">
@@ -22,7 +40,7 @@ const MarkdownWrapper = ({ route }) => {
           </div>
         </header>
         <section
-          className="mb6 lh-copy"
+          className="mb6 lh-copy markdown"
           dangerouslySetInnerHTML={{ __html: post.body }}
         />
       </article>
