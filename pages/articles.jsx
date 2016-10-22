@@ -10,20 +10,22 @@ import include from 'underscore.string/include'; // eslint-disable-line
 const BlogIndex = (props) => {
   const pageLinks = [];
   // Sort pages.
-  const sortedPages = sortBy(props.route.pages, page => access(page, 'data.date')
+  const sortedPages = sortBy(
+    props.route.pages,
+    page => access(page, 'data.date')
   ).reverse();
   sortedPages.forEach((page) => {
     if (access(page, 'file.ext') === 'md' && include(page.path, '/articles')) {
       const title = access(page, 'data.title') || page.path;
       pageLinks.push(
         <li key={page.path}>
-          <Link className="link black-80" to={prefixLink(page.path)}>{title}</Link>
+          <Link className="link black" to={prefixLink(page.path)}>{title}</Link>
         </li>
       );
     }
   });
   return (
-    <div className="ph3 ph4-m ph5-l center">
+    <main className="ph3 ph4-m ph5-l center measure-wide">
       <Helmet
         title={config.blogTitle}
         meta={[
@@ -34,7 +36,7 @@ const BlogIndex = (props) => {
       <ul className="list">
         {pageLinks}
       </ul>
-    </div>
+    </main>
   );
 };
 
