@@ -1,0 +1,18 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "global-require": [0],
+    "import/no-unresolved": [0],
+    "import/extensions": [0],
+    "import/imports-first": [0],
+    "react/forbid-prop-types": [0],
+    "react/no-danger": [0]
+  },
+  "globals": {
+    "__PREFIX_LINKS__": true
+  }
+}
