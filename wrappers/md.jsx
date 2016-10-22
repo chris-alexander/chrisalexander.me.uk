@@ -16,16 +16,18 @@ const MarkdownWrapper = (props) => {
     <main>
       <Helmet
         meta={[
-          { property: 'og:url', content: postUrl },
-          { property: 'og:type', content: 'article' },
+          { property: 'description', content: 'summary' },
           { property: 'og:title', content: post.title },
-          { property: 'og:description', content: summary },
+          { property: 'og:type', content: 'article' },
+          { property: 'og:url', content: postUrl },
           { property: 'og:image', content: feature },
+          { property: 'og:description', content: summary },
+          { property: 'og:site_name', content: config.blogTitle },
           { property: 'twitter:card', content: 'summary_large_image' },
           { property: 'twitter:site', content: config.authorTwitter },
-          { property: 'twitter:creator', content: config.authorTwitter },
           { property: 'twitter:title', content: post.title },
           { property: 'twitter:description', content: summary },
+          { property: 'twitter:creator', content: config.authorTwitter },
           { property: 'twitter:image', content: feature },
         ]}
         title={`${post.title} | ${config.blogTitle}`}
