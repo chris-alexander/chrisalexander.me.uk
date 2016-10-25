@@ -1,0 +1,9 @@
+/*
+  Custom Styling For Markdown files
+  This is temporary until I can inject tachyon classes
+  into Markdown
+ */
+
+a {
+  color: inherit;
+}
