@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import { config } from '../config';
 import { prefixLink } from 'gatsby-helpers'; // eslint-disable-line
 
+import '../css/markdown.css';
 import '../css/zenburn.css';
 
 const MarkdownWrapper = (props) => {
