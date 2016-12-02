@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/chrisalexander
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://chrisalexander.me.uk
+  * I am chrisalexander (https://keybase.io/chrisalexander) on keybase.
+  * I have a public key with fingerprint 0D2F 2051 E7D9 2CB5 C8C9  3BE2 804D 6731 0A04 9FEC
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101b064396f46ec1173f3ad08d4f21ac54c63e5755433bada24457338eac299ba000a",
+            "fingerprint": "0d2f2051e7d92cb5c8c93be2804d67310a049fec",
+            "host": "keybase.io",
+            "key_id": "804d67310a049fec",
+            "kid": "0101b064396f46ec1173f3ad08d4f21ac54c63e5755433bada24457338eac299ba000a",
+            "uid": "1d315a943712b4467cae9345ed2bad19",
+            "username": "chrisalexander"
+        },
+        "service": {
+            "hostname": "chrisalexander.me.uk",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1480639421,
+    "expire_in": 157680000,
+    "prev": "37963f05bfab6406a0d203c9827e2119c078e10e1ec427e9fff4136e3e4b0171",
+    "seqno": 13,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.58
+Comment: https://keybase.io/crypto
+
+yMIqAnicrZJbSBVBGMfPsbKyorJOCUkPW4mUHWZ2Zm8HupBEiUFBFiHRaXZ21rN4
+3D3u2WNesAcfoki6QA9WENlFoojICpIKtU5lRXcqSsJMg6QQFKWgpGal3nrsaZhv
+/v/f/L9vJj1jQiAreKK9rZQ0zzsafNTZkgpsW33nVp2gO0aNEKkTytn4wuIGS3rR
+cssQIgKAAOpAxkiTTSwzCqGCTEQMoBrYFCGhEqYyYpIiSRghnRhExFhSEFIZoaKm
+6QQAQIQCwbTsMuYmXMv2fKwhmiKQIFMMTaS6RFWqIZ2JKsCGrCAICMCaySg3xpyk
+7+DhdJJkYcvhNb6Jjsf7h/4/506N46CBoEQ0jBQo6hjLCiVMQ1hihsi9UPOFSeba
+pIJxNY25VpLEWTWxDeYK9QUCP6uyKPPH6/fzT124goVT5ZyUcB3PoU6cK2Kel0hG
+fIJXk/Atu5ge/QOL6pZt8KlyRxVzk5ZjCxHIldSzfDrEKpCRhkVYILDqhOWyqOUr
+JEVWeW/Av4dVcSRSNBmZQNJNossYyIQ/DkBUU0WFiRBqFCgqg4BBRjEvaaZpYohk
+hhjWAVSg4LdXaTucjXhOUsaZSavMJl7KZUL97Y7tEwPBrEDmpAz/uwWyps76+wl/
+5kweyymKlZYMben5+PrZy8UPCn/tzjt8v/u9c7Ako2vTng/Z1Ts7rxcuyNB/5e8N
+12XvVYdDl7Vofm541b3i0MVUq/IudeSkYbc8u9Ix+Wg6NBoEU65t6dn2dTD7xvk0
+GNj/dCUxQnNOtmXAlkjT0n1vphxMlxfQx096ltwf6muYkRt7W5R3qLR/+Y+F7kyl
+sSqzdu2OprLexdPO1h4fG9H61u2LL/JaL3yhB9pS8UBqfveyhlP9WbPlNd/sa43n
+sm9KV+eemRu0W0sevX1aV3O3/eHohstX8ntfDKdPz8qMbW5o/nypt2ioZCA0fQVm
+XRtffWqtL64c7HrTXdi+ten785Fj62//BijkSAw=
+=NtjF
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/chrisalexander
+
+==================================================================
