@@ -8,5 +8,14 @@ logs
 # Dependency directories
 node_modules/
 
+# Gatsby
+.cache/
+.gatsby-context.js
+.intermediate-representation/
+yarn.lock
+
 # Compile directory
 public
+
+
+old-src
