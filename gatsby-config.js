@@ -5,7 +5,7 @@ module.exports = {
     description: 'Blog and Portfolio Site',
     siteUrl: 'https://chrisalexander.me.uk',
   },
-  pathPrefix: '/gatsby-starter-blog',
+  pathPrefix: '/chrisalexander.me.uk',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -53,5 +53,6 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    `gatsby-plugin-netlify-cms`
   ],
 }
