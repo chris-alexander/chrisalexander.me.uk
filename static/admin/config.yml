@@ -3,6 +3,8 @@ backend:
   repo: chris-alexander/chrisalexander.me.uk
   branch: master
 
+site_domain: chrisalexander.me.uk
+
 publish_mode: editorial_workflow
 
 media_folder: static/images
