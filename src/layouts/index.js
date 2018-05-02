@@ -1,6 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
+import 'prism-themes/themes/prism-a11y-dark.css'
+
 import { rhythm, scale } from '../utils/typography'
 
 class Template extends React.Component {
