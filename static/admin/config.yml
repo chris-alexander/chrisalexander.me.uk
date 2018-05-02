@@ -1,8 +1,6 @@
 backend:
-  name: github
-  repo: chris-alexander/chrisalexander.me.uk
+  name: git-gateway
   branch: master
-  site_domain: chrisalexander.me.uk
 
 publish_mode: editorial_workflow
 
