@@ -28,11 +28,10 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          I am a self-taught JavaScript developer who lives and works in
-          London.{' '}
+          I am a self-taught JavaScript developer who lives and works in London.{' '}
           <a href="https://twitter.com/ShutoTakahiro">
             Follow me on Twitter for updates.
-           </a>
+          </a>
         </p>
       </div>
     )
