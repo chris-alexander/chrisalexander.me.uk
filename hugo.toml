@@ -1,9 +1,11 @@
 baseURL = "https://chrisalexander.me.uk/"
 theme = "hugo-bearcub"
-copyright = "Copyright © 2024, Chris Alexander."
+copyright = "Copyright © 2024, Chris Alexander"
 defaultContentLanguage = "en"
 
 enableRobotsTXT = true
+enableEmoji = true
+enableGitInfo = true
 
 [markup]
   [markup.highlight]
@@ -14,16 +16,27 @@ enableRobotsTXT = true
 [languages]
   [languages.en]
     title = "Chris Alexander"
+    languageName = "English 🇬🇧"
     languageCode = "en-GB"
     contentDir = "content"
+    weight = 1
   [languages.en.params]
-    blogPath = "/blog"
     madeWith = "Made with [Bear Cub](https://github.com/clente/hugo-bearcub)"
   [languages.jp]
+    title = "Chris Alexander"
+    languageName = "日本語 🇯🇵"
     languageCode = "ja-JP"
+    contentDir = "content.jp"
+    weight = 2
+  [languages.jp.params]
+    madeWith = "[Bear Cub](https://github.com/clente/hugo-bearcub)で作成"
 
 [params]
+  description = "Chris Alexander's personal website"
   title = "Chris Alexander"
+
+  favicon = "/favicon.ico"
+  themeStyle = "original"
 
   [params.author]
     name = "Chris Alexander"
