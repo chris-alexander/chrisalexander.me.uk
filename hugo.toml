@@ -2,6 +2,7 @@ baseURL = "https://chrisalexander.me.uk/"
 theme = "hugo-bearcub"
 copyright = "Copyright © 2024, Chris Alexander"
 defaultContentLanguage = "en"
+hasCJKLanguage = true
 
 enableRobotsTXT = true
 enableEmoji = true
