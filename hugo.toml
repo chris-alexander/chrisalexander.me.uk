@@ -36,7 +36,7 @@ enableGitInfo = true
   description = "Chris Alexander's personal website"
   title = "Chris Alexander"
 
-  favicon = "/favicon.ico"
+  favicon = "images/favicon.ico"
   themeStyle = "original"
 
   [params.author]
